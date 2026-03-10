@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-vix = pd.read_csv(r"C:\Users\ivang\Downloads\vix-daily.csv")
+vix = pd.read_csv("vix-daily.csv")
 
 vix.tail()
 
@@ -237,3 +237,4 @@ vix['Regime'].value_counts().plot(kind='bar', color=['green','yellow','orange','
 plt.title('Number of days for each volatility regime', fontsize=14)
 plt.ylabel('Days')
 plt.show()
+
