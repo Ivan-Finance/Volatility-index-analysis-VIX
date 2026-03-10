@@ -18,5 +18,5 @@ The dataset contains daily VIX values from January 2, 1990 to November 14, 2025 
 * Source: Data was retrieved from [Yahoo Finance](https://github.com/datasets/finance-vix).
 * Dataset: The specific CSV file used in this analysis is available [here](./vix-daily.csv).
 
-![VIX Historical Trend](./Volatility regimes visualization.png) 
-![Volatility regimes visualization](./Volatility regimes visualization.png)
+![VIX Historical Trend](./images/Volatility_regimes_visualization.png) 
+![Volatility regimes visualization](./images/Volatility_regimes_visualization.png)
