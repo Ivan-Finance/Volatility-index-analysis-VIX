@@ -1,4 +1,4 @@
-# Volatility-index-analysis-VIX
+# Volatility index (VIX) Analysis with Python
 This project analyzes the historical behavior of the VIX (Volatility Index) using Python. The VIX measures market expectations of future volatility for the S&P 500 and is often referred to as the fear index.
 
 When investors anticipate large market movements the VIX rises, while during stable market conditions it tends to decline. Values around 10–15 usually indicate calm markets, while values above 30–40 are typically associated with periods of financial stress.
