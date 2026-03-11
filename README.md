@@ -15,7 +15,7 @@ These variables help identify different volatility regimes and highlight periods
 
 The dataset contains daily VIX values from January 2, 1990 to November 14, 2025 and is analyzed using pandas for data manipulation and matplotlib for visualization.
 
-* Source: Data was retrieved from [Yahoo Finance](https://github.com/datasets/finance-vix).
+* Source: Data was retrieved from [Github](https://github.com/datasets/finance-vix).
 * Dataset: The specific CSV file used in this analysis is available [here](./vix-daily.csv).
   
 ## Visualizations
