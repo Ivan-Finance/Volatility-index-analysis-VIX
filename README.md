@@ -3,7 +3,7 @@
 
 This project explores the historical behavior of the CBOE Volatility Index (VIX) from 1990 to late 2025. I developed a script to identify different "Volatility Regimes", distinguishing between market complacency and periods of extreme financial stress.
 
-## 🔍 Analytical Approach
+## Analytical Approach
 I implemented several quantitative indicators to measure market tension:
 
 - **Volatility Regimes:** Classification of market states (Calm vs. Stress) based on threshold analysis.
@@ -11,7 +11,7 @@ I implemented several quantitative indicators to measure market tension:
 - **Statistical Properties:** Analysis of Log Returns and Realized Volatility to understand the speed of market reversals.
 - **Trend Smoothing:** Use of Moving Averages to filter noise from the "Fear Index."
 
-## 📊 Visualizations
+## Visualizations
 ![VIX Historical Trend](./images/Historical_VIX_Trend.png) 
 *Historical trend showing the VIX evolution over 35 years.*
 
