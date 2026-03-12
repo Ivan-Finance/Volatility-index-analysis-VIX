@@ -1,24 +1,28 @@
-# Volatility index (VIX) Analysis with Python
-This project analyzes the historical behavior of the VIX (Volatility Index) using Python. The VIX measures market expectations of future volatility for the S&P 500 and is often referred to as the fear index.
+# 📉 VIX Analysis: Mapping Market Fear
+**A quantitative study of S&P 500 volatility regimes using Python.**
 
-When investors anticipate large market movements the VIX rises, while during stable market conditions it tends to decline. Values around 10–15 usually indicate calm markets, while values above 30–40 are typically associated with periods of financial stress.
+This project explores the historical behavior of the CBOE Volatility Index (VIX) from 1990 to late 2025. Rather than just plotting price, I developed a script to identify different "Volatility Regimes"—distinguishing between market complacency and periods of extreme financial stress.
 
-The analysis focuses on the daily evolution of the VIX, identifying volatility spikes and examining the statistical properties of its movements. Several indicators are constructed to better understand market uncertainty, including:
+## 🔍 Analytical Approach
+To go beyond simple price action, I implemented several quantitative indicators to measure market tension:
 
-- daily range (intraday volatility)
-- percentage and logarithmic returns
-- moving averages
-- realized volatility
-- volatility ratio
+- **Volatility Regimes:** Classification of market states (Calm vs. Stress) based on threshold analysis.
+- **Intraday Dynamics:** Calculation of Daily Ranges to capture "hidden" volatility within trading sessions.
+- **Statistical Properties:** Analysis of Log Returns and Realized Volatility to understand the speed of market reversals.
+- **Trend Smoothing:** Use of Moving Averages to filter noise from the "Fear Index."
 
-These variables help identify different volatility regimes and highlight periods of extreme market tension.
-
-The dataset contains daily VIX values from January 2, 1990 to November 14, 2025 and is analyzed using pandas for data manipulation and matplotlib for visualization.
-
-* Source: Data was retrieved from [Github](https://github.com/datasets/finance-vix).
-* Dataset: The specific CSV file used in this analysis is available [here](./vix-daily.csv).
-  
-## Visualizations
+## 📊 Visualizations
 ![VIX Historical Trend](./images/Historical_VIX_Trend.png) 
+*Historical trend showing the VIX evolution over 35 years.*
 
 ![Volatility regimes visualization](./images/Volatility_regimes_visualization.png)
+*Identification of volatility clusters and market stress regimes.*
+
+## Tech Stack
+- **Language:** Python
+- **Data Handling:** `pandas` (for time-series manipulation).
+- **Visualization:** `matplotlib` (for generating historical trend plots).
+
+## Data & Sources
+* **Source:** Data was retrieved from [GitHub (datasets/finance-vix)](https://github.com/datasets/finance-vix).
+* **Dataset:** The specific CSV file used (1990 - 2025) is available [here](./vix-daily.csv).
