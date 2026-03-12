@@ -1,7 +1,7 @@
 # 📉 VIX Analysis: Mapping Market Fear
 **A quantitative study of S&P 500 volatility regimes using Python.**
 
-This project explores the historical behavior of the CBOE Volatility Index (VIX) from 1990 to late 2025. Rather than just plotting price, I developed a script to identify different "Volatility Regimes"—distinguishing between market complacency and periods of extreme financial stress.
+This project explores the historical behavior of the CBOE Volatility Index (VIX) from 1990 to late 2025. Rather than just plotting price, I developed a script to identify different "Volatility Regimes", distinguishing between market complacency and periods of extreme financial stress.
 
 ## 🔍 Analytical Approach
 To go beyond simple price action, I implemented several quantitative indicators to measure market tension:
