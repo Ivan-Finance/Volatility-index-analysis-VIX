@@ -24,5 +24,5 @@ I implemented several quantitative indicators to measure market tension:
 - **Visualization:** `matplotlib` (for generating historical trend plots).
 
 ## Data & Sources
-* **Source:** Data was retrieved from [GitHub (datasets/finance-vix)](https://github.com/datasets/finance-vix).
+* **Source:** Data was retrieved from [Github](https://github.com/datasets/finance-vix).
 * **Dataset:** The specific CSV file used (1990 - 2025) is available [here](./vix-daily.csv).
