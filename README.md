@@ -11,9 +11,17 @@ This project analyzes the CBOE Volatility Index (VIX) from 1990 to 2025 and comp
 - **Correlation:** 12-month rolling correlation quantifies how the VIX reacts to stock market movements over time.
 
 ## Visualizations
-![VIX Trend](./images/Historical_VIX_Trend.png)  
-![Volatility Regimes](./images/Volatility_regimes_visualization.png)  
-![VIX vs S&P500 Dual Axis](./images/vix_vs_sp500.jpeg)  
+<p align="center">
+  <img src="./images/Historical_VIX_Trend.png" width="400">
+</p>
+
+<p align="center">
+  <img src="./images/Volatility_regimes_visualization.png" width="400">
+</p>
+
+<p align="center">
+  <img src="./images/vix_vs_sp500.jpeg" width="400">
+</p>
 
 <p align="center">
   <img src="./images/monthly_returns.jpeg" width="400">
