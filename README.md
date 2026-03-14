@@ -16,7 +16,7 @@ This project analyzes the CBOE Volatility Index (VIX) from 1990 to 2025 and comp
 </p>
 
 <p align="center">
-  <img src="./images/Volatility_regimes_visualization.png" width="900">
+  <img src="./images/Volatility_regimes_visualization.png" width="700">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@ This project analyzes the CBOE Volatility Index (VIX) from 1990 to 2025 and comp
 </p>
 
 <p align="center">
-  <img src="./images/monthly_returns.jpeg" width="700">
+  <img src="./images/monthly_returns.jpeg" width="600">
 </p>
 
 ## Data & Sources
