@@ -16,11 +16,6 @@ This project analyzes the CBOE Volatility Index (VIX) from 1990 to 2025 and comp
 ![VIX vs S&P500 Dual Axis](./images/vix_vs_sp500.jpeg)  
 ![Monthly Returns Scatter](./images/monthly_returns.jpeg)  
 
-## Tech Stack
-- **Python**  
-- **pandas** for time-series manipulation  
-- **matplotlib** for visualizations  
-
 ## Data & Sources
 
 ### VIX
