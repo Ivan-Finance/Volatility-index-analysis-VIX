@@ -296,13 +296,17 @@ plt.title('VIX vs S&P500 (dual axis)')
 fig.tight_layout()
 plt.show()
 
-# In this plot, the S&P500 and the VIX are shown together over time, but on separate vertical axes to preserve
-# their natural scales. The S&P500 values are much larger than the VIX, so plotting them on the same axis
-# would make the VIX appear almost flat and hide its fluctuations. By assigning the S&P500 to the left
-# y-axis and the VIX to the right y-axis, each series retains its original range: the S&P500 rises from
-# a few thousand to several hundred thousand, while the VIX fluctuates between roughly 10 and 60. This
-# dual-axis approach makes both series fully visible, allowing one to observe the growth of the S&P500
-# alongside the oscillations of market volatility captured by the VIX, without distorting either series.
+"""
+
+In this plot, the S&P500 and the VIX are shown together over time, but on separate vertical axes to preserve
+their natural scales. The S&P500 values are much larger than the VIX, so plotting them on the same axis
+would make the VIX appear almost flat and hide its fluctuations. By assigning the S&P500 to the left
+y-axis and the VIX to the right y-axis, each series retains its original range: the S&P500 rises from
+a few thousand to several hundred thousand, while the VIX fluctuates between roughly 10 and 60. This
+dual-axis approach makes both series fully visible, allowing one to observe the growth of the S&P500
+alongside the oscillations of market volatility captured by the VIX, without distorting either series.
+
+""" 
 
 # Monthly log returns graph
 plt.figure(figsize=(12,5))
@@ -335,13 +339,17 @@ plt.ylabel('VIX return')
 plt.grid(True)
 plt.show()
 
-# The scatter plot shows the relationship between monthly returns of the S&P500 (x-axis) and the VIX
-# (y-axis). Points are colored green for positive S&P500 months and red for negative months. The
-# pattern illustrates the typical inverse relationship: the VIX tends to rise when the S&P500 falls
-# (red points higher) and decline when the S&P500 rises (green points lower). Most points cluster
-# near the center, reflecting months with moderate returns for both indices, while the overall
-# rightward tilt shows the historical tendency of the stock market to produce more positive
-# than negative months.
+"""
+
+The scatter plot shows the relationship between monthly returns of the S&P500 (x-axis) and the VIX
+(y-axis). Points are colored green for positive S&P500 months and red for negative months. The
+pattern illustrates the typical inverse relationship: the VIX tends to rise when the S&P500 falls
+(red points higher) and decline when the S&P500 rises (green points lower). Most points cluster
+near the center, reflecting months with moderate returns for both indices, while the overall
+rightward tilt shows the historical tendency of the stock market to produce more positive
+than negative months.
+
+"""
 
 
 # Rolling correlation graph (12 months)
@@ -354,12 +362,17 @@ plt.ylabel('Correlation')
 plt.grid(True, linestyle='--', alpha=0.5)
 plt.show()
 
-# The rolling 12-month correlation between the S&P500 and the VIX illustrates the typical inverse relationship
-# between equity markets and market volatility. Negative values indicate that when the S&P500 rises, the VIX
-# generally falls, reflecting lower perceived risk and market calm. Strongly negative periods, such as around
-# 2003–2004, 2009, 2014, and 2020, correspond to episodes of market stress or rapid recoveries, where VIX
-# spikes sharply when the market drops. Positive or near-zero correlations, observed in periods like 1996
-# or 2018, reflect calmer market phases or temporary deviations from the usual inverse relationship.
-# Overall, this rolling correlation confirms that the VIX acts as a fear gauge, moving opposite to
-# the S&P500 in most market conditions.
+"""
+
+The rolling 12-month correlation between the S&P500 and the VIX illustrates the typical inverse relationship
+between equity markets and market volatility. Negative values indicate that when the S&P500 rises, the VIX
+generally falls, reflecting lower perceived risk and market calm. Strongly negative periods, such as around
+2003–2004, 2009, 2014, and 2020, correspond to episodes of market stress or rapid recoveries, where VIX
+spikes sharply when the market drops. Positive or near-zero correlations, observed in periods like 1996
+or 2018, reflect calmer market phases or temporary deviations from the usual inverse relationship.
+Overall, this rolling correlation confirms that the VIX acts as a fear gauge, moving opposite to
+the S&P500 in most market conditions.
+
+"""
+
 
