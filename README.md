@@ -19,10 +19,9 @@ This project analyzes the CBOE Volatility Index (VIX) from 1990 to 2025 and comp
 ## Data & Sources
 
 ### VIX
-- **Source:** CBOE Volatility Index time series available on [GitHub finance-vix dataset](https://github.com/datasets/finance-vix) 
+- **Source:** CBOE Volatility Index time series available on [GitHub finance-vix dataset](https://github.com/datasets/finance-vix). 
 - **Dataset file used in this project:** is available [here](./vix-daily.csv).
 
 ### S&P500
-- **Source:** S&P 500 index historical monthly data on [Macrotrends](https://www.macrotrends.net/2324/sp-500-historical-chart-data#google_vignette)  
-  https://github.com/datasets/s-and-p-500 :contentReference[oaicite:3]{index=3}  
+- **Source:** S&P 500 index historical monthly data on [Macrotrends](https://www.macrotrends.net/2324/sp-500-historical-chart-data#google_vignette).  
 - **Dataset file used in this project:**  is available [here](./sp500.csv).
