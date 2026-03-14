@@ -238,3 +238,128 @@ plt.title('Number of days for each volatility regime', fontsize=14)
 plt.ylabel('Days')
 plt.show()
 
+
+# SP500 comparison
+# Loading SP500 monthly dataset
+sp500 = pd.read_csv(
+    r"sp500.csv",
+    sep=';',
+    decimal=','
+)
+sp500.columns = sp500.columns.str.strip()
+sp500.rename(columns={'Date':'DATE', 'Value':'CLOSE'}, inplace=True)
+sp500['DATE'] = pd.to_datetime(sp500['DATE'])
+sp500.set_index('DATE', inplace=True)
+sp500.index = sp500.index.to_period('M').to_timestamp('M')
+
+print(sp500.head())
+
+
+vix_monthly_df = vix_monthly[['CLOSE']].rename(columns={'CLOSE':'VIX'})
+sp500_df = sp500[['CLOSE']].rename(columns={'CLOSE':'SP500'})
+data = pd.concat([vix_monthly_df, sp500_df], axis=1).dropna()
+
+print(data.head())
+
+
+data['VIX'] = pd.to_numeric(data['VIX'], errors='coerce')
+data['SP500'] = pd.to_numeric(data['SP500'], errors='coerce')
+data = data.dropna()
+
+data['VIX_ret'] = np.log(data['VIX'] / data['VIX'].shift(1))
+data['SP500_ret'] = np.log(data['SP500'] / data['SP500'].shift(1))
+data_returns = data[['VIX_ret', 'SP500_ret']].dropna()
+
+
+# Graph (normalized values) 
+plt.figure(figsize=(12,5))
+plt.plot(data['SP500']/data['SP500'].iloc[0], label='S&P500')
+plt.plot(data['VIX']/data['VIX'].iloc[0], label='VIX')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+# Graph (dual axis)
+fig, ax1 = plt.subplots(figsize=(12,5))
+
+ax1.plot(data['SP500'], color='blue', label='S&P500')
+ax1.set_ylabel('S&P500', color='blue')
+ax1.tick_params(axis='y', labelcolor='blue')
+
+ax2 = ax1.twinx()
+ax2.plot(data['VIX'], color='orange', label='VIX')
+ax2.set_ylabel('VIX', color='orange')
+ax2.tick_params(axis='y', labelcolor='orange')
+
+plt.title('VIX vs S&P500 (dual axis)')
+fig.tight_layout()
+plt.show()
+
+# In this plot, the S&P500 and the VIX are shown together over time, but on separate vertical axes to preserve
+# their natural scales. The S&P500 values are much larger than the VIX, so plotting them on the same axis
+# would make the VIX appear almost flat and hide its fluctuations. By assigning the S&P500 to the left
+# y-axis and the VIX to the right y-axis, each series retains its original range: the S&P500 rises from
+# a few thousand to several hundred thousand, while the VIX fluctuates between roughly 10 and 60. This
+# dual-axis approach makes both series fully visible, allowing one to observe the growth of the S&P500
+# alongside the oscillations of market volatility captured by the VIX, without distorting either series.
+
+# Monthly log returns graph
+plt.figure(figsize=(12,5))
+plt.plot(data_returns['SP500_ret'], label='S&P500')
+plt.plot(data_returns['VIX_ret'], label='VIX')
+plt.title('Monthly log returns: VIX vs S&P500')
+plt.xlabel('Date')
+plt.ylabel('Log return')
+plt.legend()
+plt.grid(True)
+
+plt.show()
+
+
+print(data.head())
+print(data.tail())
+print(data.describe())
+print(data.isna().sum())
+
+
+# Scatter plot returns graph
+plt.figure(figsize=(7,6))
+colors = ['green' if r > 0 else 'red' for r in data_returns['SP500_ret']]
+
+plt.scatter(data_returns['SP500_ret'], data_returns['VIX_ret'], 
+            c=colors, s=50, alpha=0.6, edgecolors='k')
+plt.title('VIX vs S&P500 monthly returns')
+plt.xlabel('S&P500 return')
+plt.ylabel('VIX return')
+plt.grid(True)
+plt.show()
+
+# The scatter plot shows the relationship between monthly returns of the S&P500 (x-axis) and the VIX
+# (y-axis). Points are colored green for positive S&P500 months and red for negative months. The
+# pattern illustrates the typical inverse relationship: the VIX tends to rise when the S&P500 falls
+# (red points higher) and decline when the S&P500 rises (green points lower). Most points cluster
+# near the center, reflecting months with moderate returns for both indices, while the overall
+# rightward tilt shows the historical tendency of the stock market to produce more positive
+# than negative months.
+
+
+# Rolling correlation graph (12 months)
+rolling_corr = data['SP500'].pct_change().rolling(12).corr(data['VIX'].pct_change())
+plt.figure(figsize=(12,4))
+plt.plot(rolling_corr)
+plt.title('12-Month Rolling Correlation between S&P500 and VIX')
+plt.xlabel('Date')
+plt.ylabel('Correlation')
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.show()
+
+# The rolling 12-month correlation between the S&P500 and the VIX illustrates the typical inverse relationship
+# between equity markets and market volatility. Negative values indicate that when the S&P500 rises, the VIX
+# generally falls, reflecting lower perceived risk and market calm. Strongly negative periods, such as around
+# 2003–2004, 2009, 2014, and 2020, correspond to episodes of market stress or rapid recoveries, where VIX
+# spikes sharply when the market drops. Positive or near-zero correlations, observed in periods like 1996
+# or 2018, reflect calmer market phases or temporary deviations from the usual inverse relationship.
+# Overall, this rolling correlation confirms that the VIX acts as a fear gauge, moving opposite to
+# the S&P500 in most market conditions.
+
