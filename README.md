@@ -16,7 +16,7 @@ how fear and equity performance interact over time.
 
 ## Key Analyses
 
-- **Volatility Regimes*: markets are classified as Calm or Stress based on VIX thresholds,
+- **Volatility Regimes**: markets are classified as Calm or Stress based on VIX thresholds,
   making it easy to isolate periods of elevated fear
 - **Returns & Dynamics**: daily and monthly log returns, intraday ranges, and realized
   volatility capture how the market moves within each regime
