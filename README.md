@@ -35,15 +35,11 @@ how fear and equity performance interact over time.
 </p>
 
 <p align="center">
-  <img src="./images/Volatility_regimes_visualization.png" width="1100">
-</p>
-
-<p align="center">
   <img src="./images/vix_vs_sp500.jpeg" width="850">
 </p>
 
 <p align="center">
-  <img src="./images/monthly_returns.jpeg" width="500">
+  <img src="./images/monthly_returns.jpeg" width="400">
 </p>
 
 ---
