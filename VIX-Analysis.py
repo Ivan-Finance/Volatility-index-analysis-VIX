@@ -87,13 +87,13 @@ Volatility ratio interpretation:
 
 # Volatility regimes
 
-def volatility_classification(valore_vix):
+def volatility_classification(vix_value):
 
-    if valore_vix < 15:
+    if vix_value < 15:
         return "Low"
-    elif valore_vix < 25:
+    elif vix_value < 25:
         return "Mid"
-    elif valore_vix < 40:
+    elif vix_value < 40:
         return "High"
     else:
         return "Very high"
