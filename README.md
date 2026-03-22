@@ -31,7 +31,7 @@ how fear and equity performance interact over time.
 ## Visualizations
 
 <p align="center">
-  <img src="./images/Historical_VIX_Trend.png" width="850">
+  <img src="./images/vol_regimes.png" width="850">
 </p>
 
 <p align="center">
