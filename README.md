@@ -39,7 +39,7 @@ how fear and equity performance interact over time.
 </p>
 
 <p align="center">
-  <img src="./images/monthly_returns.jpeg" width="400">
+  <img src="./images/monthly_returns.jpeg" width="450">
 </p>
 
 ---
