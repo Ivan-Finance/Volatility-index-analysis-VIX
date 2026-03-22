@@ -53,13 +53,3 @@ how fear and equity performance interact over time.
 ### S&P 500
 - **Source:** S&P 500 historical monthly data on [Macrotrends](https://www.macrotrends.net/2324/sp-500-historical-chart-data#google_vignette)
 - **Dataset file used in this project:** available [here](./sp500.csv)
-
----
-
-## Libraries Used
-
-| Library | Purpose |
-|---|---|
-| `pandas` | Data loading and manipulation |
-| `numpy` | Numerical calculations and log returns |
-| `matplotlib` | All visualizations |
